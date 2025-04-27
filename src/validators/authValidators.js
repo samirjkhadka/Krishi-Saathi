@@ -2,7 +2,7 @@ const { body } = require("express-validator");
 
 const loginValidationRules = () => {
   return [
-    body("email").isEmail().notEmpty().withMessage("Email is required"),
+    body("username").notEmpty().withMessage("Username is required"),
     body("password")
       .isLength({ max: 30, min: 10 })
       .notEmpty()
